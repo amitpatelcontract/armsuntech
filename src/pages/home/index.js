@@ -40,8 +40,8 @@ const Home = () => {
       <Header />
       {/* Hero Section */}
       <section className="hero-section gradient-bg">
-        <div className="hero-content">
-          <h1 className="title animate-fade-in">
+        <div className="hero-content" style={{ paddingTop: '2rem' }}>
+          <h1 className="title animate-fade-in" style={{ margin: 20 }}>
             <span className="primary-text">
               Elite Developers, Exceptional Ethics
             </span>
@@ -125,49 +125,68 @@ const Home = () => {
 
       {/* Client Section */}
       <section className="clients-section glass-morphism">
-        <h2 className="section-title">Trusted By Industry Leaders</h2>
-        <div className="client-grid animate-cards">
-          {portfolioItems.map((item) => (
-            <div key={item.client} className="client-card hover-lift">
-              <img 
-                src={item.logo}
-                alt={item.client}
-                className="client-logo"
-              />
+        <h2 className="section-title text-center">
+          <span className="highlight-text">Trusted By</span> Industry Leaders
+        </h2>
+        <div className="client-showcase">
+          {portfolioItems.map((item, index) => (
+            <div key={item.client} className="client-showcase-item">
+              <span className="client-number">{index + 1}</span>
+              <h3>{item.client}</h3>
+              <p>{item.description}</p>
             </div>
           ))}
         </div>
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="contact-section">
-        <h2>Ready to Build Something Amazing?</h2>
-        <p>Let's discuss how we can help achieve your digital transformation goals.</p>
-        <div className="contact-buttons">
-          <a 
-            className="cta-button"
-            href="https://www.linkedin.com/in/aamitmit/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Connect on LinkedIn
-          </a>
-          <a 
-            className="cta-button secondary"
-            href="mailto:contact@armsuntech.com"
-          >
-            Email Us
-          </a>
+      <section className="contact-section glass-morphism">
+        <div className="contact-content">
+          <h2 className="section-title">
+            <span className="highlight-text">Ready to</span> Build Something Amazing?
+          </h2>
+          <p className="contact-description">
+            Let's discuss how we can help achieve your digital transformation goals.
+          </p>
+          <div className="contact-buttons">
+            <a 
+              className="contact-btn primary-btn"
+              href="https://www.linkedin.com/in/aamitmit/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span className="btn-icon">💼</span>
+              Connect on LinkedIn
+            </a>
+            <a 
+              className="contact-btn secondary-btn"
+              href="mailto:contact@armsuntech.com"
+            >
+              <span className="btn-icon">✉️</span>
+              Email Us
+            </a>
+          </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="footer">
+      <footer className="footer-section">
         <div className="footer-content">
-          <p>&copy; {new Date().getFullYear()} Armsuntech. All rights reserved.</p>
-          <div className="footer-links">
-            <a href="/privacy">Privacy Policy</a>
-            <a href="/terms">Terms of Service</a>
+          <div className="footer-contact">
+            <h3>Contact Us</h3>
+            <div className="contact-info">
+              <p>📍 New York, USA</p>
+              <p>📞 +1 (555) 123-4567</p>
+              <p>✉️ contact@armsuntech.com</p>
+            </div>
+          </div>
+          <div className="footer-bottom">
+            <p className="copyright">© {new Date().getFullYear()} Armsuntech. All rights reserved.</p>
+            <div className="footer-links">
+              <a href="/privacy">Privacy Policy</a>
+              <span className="divider">•</span>
+              <a href="/terms">Terms of Service</a>
+            </div>
           </div>
         </div>
       </footer>

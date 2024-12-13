@@ -3,7 +3,7 @@ import Logo from "../../assets/images/logo.png";
 
 const Header = () => {
   return (
-    <div className="header">
+    <div className="header" style={{ background: 'transparent' }}>
       <nav className="navbar navbar-expand-sm">
         <div className="container-fluid">
           <div id="navbarID" className="navbar-brand">
