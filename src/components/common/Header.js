@@ -6,14 +6,14 @@ const Header = () => {
     <div className="header" style={{ background: 'transparent' }}>
       <nav className="navbar navbar-expand-sm">
         <div className="container-fluid">
-          <div id="navbarID" className="navbar-brand">
+          {/* <div id="navbarID" className="navbar-brand">
             <img 
               src={Logo} 
               alt="Armsuntech Logo"
               height={65} 
               className="ms-4" 
             />
-          </div>
+          </div> */}
         </div>
       </nav>
     </div>
