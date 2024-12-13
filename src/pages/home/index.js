@@ -37,6 +37,7 @@ const getServiceDescription = (service) => {
 const Home = () => {
   return (
     <div className="page-content">
+      <Header />
       {/* Hero Section */}
       <section className="hero-section gradient-bg">
         <div className="hero-content">
