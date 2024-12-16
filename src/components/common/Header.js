@@ -38,40 +38,14 @@ const Header = () => {
               marginLeft: '1.5rem',
               gap: '1.2rem'
             }}>
-              <svg 
-                width="64" 
-                height="64" 
-                viewBox="0 0 80 80" 
-                fill="none" 
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                {/* Hexagonal background with gradient */}
-                <path 
-                  d="M40 0L80 23.094V56.906L40 80L0 56.906V23.094L40 0Z" 
-                  fill="url(#hexGradient)"
-                  stroke="rgba(255, 255, 255, 0.2)"
-                  strokeWidth="2"
-                />
-                {/* Letter A with gradient */}
-                <path 
-                  d="M26 60L40 20L54 60M31 48H49" 
-                  stroke="url(#letterGradient)"
-                  strokeWidth="6"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                {/* Define gradients */}
-                <defs>
-                  <linearGradient id="hexGradient" x1="0" y1="0" x2="80" y2="80">
-                    <stop offset="0%" stopColor="#1E1B4B" />
-                    <stop offset="100%" stopColor="#312E81" />
-                  </linearGradient>
-                  <linearGradient id="letterGradient" x1="40" y1="20" x2="40" y2="60">
-                    <stop offset="0%" stopColor="#818CF8" />
-                    <stop offset="100%" stopColor="#6366F1" />
-                  </linearGradient>
-                </defs>
-              </svg>
+              <img 
+                src={require("../../assets/images/logo.png")}
+                alt="Armsuntech Logo"
+                style={{
+                  width: '64px',
+                  height: '64px'
+                }}
+              />
               <div style={{
                 fontFamily: "'Poppins', sans-serif",
                 fontSize: '1.8rem',
