@@ -179,51 +179,77 @@ const Home = () => {
           padding: '1rem'
         }}>
           <h1 className="title animate-fade-in" style={{ margin: 20 }}>
-            <span className="primary-text" style={{ 
+            {/* <span className="primary-text" style={{ 
               fontSize: '2.4rem',
-              background: 'linear-gradient(135deg, #90caf9 0%, #64b5f6 100%)',
+              background: 'linear-gradient(135deg, #2C3E50 0%, #34495E 100%)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
               display: 'block',
               marginBottom: '1rem'
             }}>
               Elite developers with uncompromising ethics
-            </span>
-            <span className="secondary-text" style={{
-              fontSize: '1.6rem',
-              color: 'rgba(255, 255, 255, 0.85)',
-              display: 'block',
-              marginBottom: '1rem',
-              lineHeight: '1.4'
-            }}>
-              trusted by startups and leaders like AMC, CBS, Macy's,
-              BBC America, and AccuWeather
-            </span>
+            </span> */}
             <span className="tech-text" style={{
-              fontSize: '1.8rem',
-              background: 'linear-gradient(135deg, #64b5f6 0%, #42a5f5 100%)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
+              fontSize: '2rem',
+              color: '#FFFFFF',
               display: 'block',
-              marginBottom: '2rem'
+              marginBottom: '2.5rem',
+              lineHeight: '1.5',
+              fontFamily: "'Inter', sans-serif",
+              fontWeight: '500'
             }}>
               We deliver top-tier solutions in{' '}
               <span className="tech-highlight" style={{
-                color: '#FFFFFF',
-                WebkitTextFillColor: '#FFFFFF',
-                textShadow: '0 0 10px rgba(97, 219, 251, 0.5)'
+                color: '#4FC3F7',
+                fontWeight: '600',
+                textShadow: '0 0 15px rgba(79, 195, 247, 0.3)',
+                padding: '0 4px'
               }}>React Native</span>,{' '}
               <span className="tech-highlight" style={{
-                color: '#FFFFFF',
-                WebkitTextFillColor: '#FFFFFF',
-                textShadow: '0 0 10px rgba(0, 216, 255, 0.5)'
+                color: '#4FC3F7',
+                fontWeight: '600',
+                textShadow: '0 0 15px rgba(79, 195, 247, 0.3)',
+                padding: '0 4px'
               }}>React.js</span>, and{' '}
               <span className="tech-highlight" style={{
-                color: '#FFFFFF',
-                WebkitTextFillColor: '#FFFFFF',
-                textShadow: '0 0 10px rgba(255, 45, 32, 0.5)'
+                color: '#4FC3F7',
+                fontWeight: '600',
+                textShadow: '0 0 15px rgba(79, 195, 247, 0.3)',
+                padding: '0 4px'
               }}>Laravel</span>
             </span>
+            <span className="secondary-text" style={{
+              fontSize: '1.4rem',
+              color: '#E0E0E0',
+              display: 'block',
+              marginBottom: '1.5rem',
+              lineHeight: '1.6',
+              fontFamily: "'Inter', sans-serif",
+              fontWeight: '400'
+            }}>
+              Trusted by startups and leaders like{' '}
+              <span style={{ 
+                color: '#64B5F6',
+                fontWeight: '600' 
+              }}>AMC</span>,{' '}
+              <span style={{ 
+                color: '#90CAF9',
+                fontWeight: '600' 
+              }}>CBS</span>,{' '}
+              <span style={{ 
+                color: '#64B5F6',
+                fontWeight: '600' 
+              }}>Macy's</span>,{' '}
+              <span style={{ 
+                color: '#90CAF9',
+                fontWeight: '600' 
+              }}>BBC America</span>, and{' '}
+              <span style={{ 
+                color: '#64B5F6',
+                fontWeight: '600' 
+              }}>AccuWeather</span>
+            </span>
+            
           </h1>
           <a 
             className="cta-button glow-effect" 
