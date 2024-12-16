@@ -1,8 +1,36 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 const Header = () => {
+  const [scrollPosition, setScrollPosition] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollPosition(window.scrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const blurValue = Math.min(scrollPosition / 100 * 8, 12);
+
   return (
-    <div className="header" style={{ background: 'transparent' }}>
+    <div className="header" style={{
+      background: 'rgba(105, 114, 207, 0.8)',
+      position: 'fixed',
+      top: 0,
+      left: 0,
+      right: 0,
+      zIndex: 1000,
+      transition: 'all 0.3s ease-in-out',
+      backdropFilter: `blur(${blurValue}px)`,
+      boxShadow: scrollPosition > 20 
+        ? '0 4px 20px rgba(0, 0, 0, 0.1)'
+        : 'none',
+      borderBottom: scrollPosition > 20 
+        ? '1px solid rgba(255, 255, 255, 0.1)'
+        : 'none'
+    }}>
       <nav className="navbar navbar-expand-sm">
         <div className="container-fluid">
           <div id="navbarID" className="navbar-brand">
@@ -11,34 +39,34 @@ const Header = () => {
               display: 'flex',
               alignItems: 'center',
               marginLeft: '1rem',
-              gap: '0.5rem'
+              gap: '1rem'
             }}>
               <svg 
-                width="40" 
-                height="40" 
-                viewBox="0 0 40 40" 
+                width="80" 
+                height="80" 
+                viewBox="0 0 80 80" 
                 fill="none" 
                 xmlns="http://www.w3.org/2000/svg"
               >
                 {/* Tech-styled hexagonal background */}
                 <path 
-                  d="M20 0L37.3205 10V30L20 40L2.67949 30V10L20 0Z" 
+                  d="M40 0L80 23.094V56.906L40 80L0 56.906V23.094L40 0Z" 
                   fill="#1A1A1A"
                   stroke="#333333"
-                  strokeWidth="1"
+                  strokeWidth="2"
                 />
                 {/* Letter A */}
                 <path 
-                  d="M13 30L20 10L27 30M15.5 24H24.5" 
+                  d="M26 60L40 20L54 60M31 48H49" 
                   stroke="#FF3E3E"
-                  strokeWidth="3"
+                  strokeWidth="6"
                   strokeLinecap="round"
                   strokeLinejoin="round"
                 />
               </svg>
               <div style={{
                 fontFamily: 'Inter, sans-serif',
-                fontSize: '1.5rem',
+                fontSize: '1.8rem',
                 fontWeight: '700',
                 color: 'white',
                 letterSpacing: '0.5px'
