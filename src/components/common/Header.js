@@ -16,7 +16,7 @@ const Header = () => {
 
   return (
     <div className="header" style={{
-      background: 'rgba(105, 114, 207, 0.8)',
+      background: 'rgba(105, 114, 207, 0.95)',
       position: 'fixed',
       top: 0,
       left: 0,
@@ -25,7 +25,7 @@ const Header = () => {
       transition: 'all 0.3s ease-in-out',
       backdropFilter: `blur(${blurValue}px)`,
       boxShadow: scrollPosition > 20 
-        ? '0 4px 16px rgba(0, 0, 0, 0.08)'
+        ? '0 8px 32px rgba(31, 38, 135, 0.15)'
         : 'none',
     }}>
       <nav className="navbar navbar-expand-sm">
@@ -35,8 +35,8 @@ const Header = () => {
               height: 65,
               display: 'flex',
               alignItems: 'center',
-              marginLeft: '1rem',
-              gap: '1rem'
+              marginLeft: '1.5rem',
+              gap: '1.2rem'
             }}>
               <svg 
                 width="64" 
@@ -49,7 +49,7 @@ const Header = () => {
                 <path 
                   d="M40 0L80 23.094V56.906L40 80L0 56.906V23.094L40 0Z" 
                   fill="#1A1A1A"
-                  stroke="#333333"
+                  stroke="rgba(255, 255, 255, 0.15)"
                   strokeWidth="2"
                 />
                 {/* Letter A */}
@@ -64,9 +64,14 @@ const Header = () => {
               <div style={{
                 fontFamily: 'Inter, sans-serif',
                 fontSize: '1.8rem',
-                fontWeight: '700',
+                fontWeight: '600',
                 color: 'white',
-                letterSpacing: '0.5px'
+                letterSpacing: '0.8px',
+                textTransform: 'uppercase',
+                background: 'linear-gradient(to right, #FFFFFF 0%, rgba(255,255,255,0.9) 100%)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.1))'
               }}>
                 Armsuntech
               </div>

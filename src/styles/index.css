@@ -15,6 +15,8 @@ body {
   width: 100%;
   padding-left: 2.52rem;
   will-change: background, backdrop-filter, box-shadow;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: saturate(180%) blur(5px);
 }
 
 .page-content { background: #6971cf; margin-top: 0; padding-top: 1rem; }
@@ -386,4 +388,16 @@ body {
     gap: 1.5rem;
     padding: 1.5rem 0;
   }
+}
+
+/* Add a subtle animation for the logo */
+.navbar-brand:hover svg {
+  transform: scale(1.02);
+  transition: transform 0.3s ease;
+}
+
+/* Add a subtle hover effect for the text */
+.navbar-brand:hover div {
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.15));
+  transition: filter 0.3s ease;
 }
