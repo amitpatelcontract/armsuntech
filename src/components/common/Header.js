@@ -25,11 +25,8 @@ const Header = () => {
       transition: 'all 0.3s ease-in-out',
       backdropFilter: `blur(${blurValue}px)`,
       boxShadow: scrollPosition > 20 
-        ? '0 4px 20px rgba(0, 0, 0, 0.1)'
+        ? '0 4px 16px rgba(0, 0, 0, 0.08)'
         : 'none',
-      borderBottom: scrollPosition > 20 
-        ? '1px solid rgba(255, 255, 255, 0.1)'
-        : 'none'
     }}>
       <nav className="navbar navbar-expand-sm">
         <div className="container-fluid">
@@ -42,8 +39,8 @@ const Header = () => {
               gap: '1rem'
             }}>
               <svg 
-                width="80" 
-                height="80" 
+                width="64" 
+                height="64" 
                 viewBox="0 0 80 80" 
                 fill="none" 
                 xmlns="http://www.w3.org/2000/svg"
