@@ -173,7 +173,7 @@ const Home = () => {
         }}>
           <h1 className="title animate-fade-in" style={{ margin: 20 }}>
             <span className="primary-text">
-              Elite Developers, Exceptional Ethics
+              Elite Software Engineers, Exceptional Ethics
             </span>
             <br />
             <span className="secondary-text">
