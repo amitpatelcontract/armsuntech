@@ -43,7 +43,8 @@ const Header = () => {
                 alt="Armsuntech Logo"
                 style={{
                   width: '64px',
-                  height: '64px'
+                  height: '64px',
+                  marginBottom: '1rem'
                 }}
               />
               <div style={{
@@ -70,7 +71,8 @@ const Header = () => {
                   WebkitBackgroundClip: 'text',
                   WebkitTextFillColor: 'transparent',
                   textTransform: 'uppercase',
-                  marginTop: '0.2rem'
+                  marginTop: '0.2rem',
+                  marginBottom: '1rem'
                 }}>
                   Custom Mobile & Web Solutions
                 </span>

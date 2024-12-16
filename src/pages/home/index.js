@@ -11,17 +11,20 @@ const portfolioItems = [
   {
     client: "Macy's",
     logo: clientLogos.macys,
-    description: "Built enterprise-level e-commerce platform handling millions of daily transactions"
+    description: "Built enterprise-level e-commerce platform handling millions of daily transactions",
+    className: "theme-bg-secondary"
   },
   {
     client: "CBS News",
     logo: clientLogos.cbs,
-    description: "Developed real-time news delivery system and content management platform"
+    description: "Developed real-time news delivery system and content management platform",
+    className: "theme-bg-primary"
   },
   {
     client: "AccuWeather",
     logo: clientLogos.accuweather,
-    description: "Created weather forecasting applications for web and mobile platforms"
+    description: "Created weather forecasting applications for web and mobile platforms",
+    className: "theme-bg-secondary"
   }
 ];
 
@@ -31,17 +34,21 @@ const getServiceDescription = (service) => {
     'Web Development': 'Building responsive, scalable web solutions with modern technologies.',
     'API Integration': 'Streamlining data flow with custom API development and integration.'
   };
-  return descriptions[service];
+  return (
+    <div className="theme-text-secondary">
+      {descriptions[service]}
+    </div>
+  );
 };
 
 const achievementStats = [
   {
-    number: "500+",
+    number: "30+",
     label: "Projects Delivered",
     description: "Successfully completed projects across various industries"
   },
   {
-    number: "50+",
+    number: "7+",
     label: "Global Clients",
     description: "Trusted by businesses worldwide for digital solutions including Fortune 500 companies ( Macy's, CBS News, AccuWeather, etc.)"
   },
@@ -164,12 +171,12 @@ const Home = () => {
     <div className="page-content">
       <Header />
       {/* Hero Section */}
-      <section className="hero-section gradient-bg" style={{ marginBottom: '4rem' }}>
+      <section className="hero-section gradient-bg" style={{ marginBottom: '2rem' }}>
         <div className="hero-content" style={{ 
-          paddingTop: '2rem',
+          paddingTop: '0rem',
           maxWidth: '1200px',
           margin: '0 auto',
-          padding: '2rem'
+          padding: '1rem'
         }}>
           <h1 className="title animate-fade-in" style={{ margin: 20 }}>
             <span className="primary-text" style={{ 
@@ -197,7 +204,8 @@ const Home = () => {
               background: 'linear-gradient(135deg, #64b5f6 0%, #42a5f5 100%)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
-              display: 'block'
+              display: 'block',
+              marginBottom: '2rem'
             }}>
               We deliver top-tier solutions in{' '}
               <span className="tech-highlight" style={{

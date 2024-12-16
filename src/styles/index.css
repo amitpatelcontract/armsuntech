@@ -1,5 +1,5 @@
 #root { 
-  background: linear-gradient(135deg, #4338CA 0%, #3730A3 100%);
+  background: linear-gradient(135deg, #3f4959 0%, #2f3744 100%);
   min-height: 100vh;
 }
 
@@ -192,11 +192,13 @@ body {
   max-width: 150px;
   height: auto;
   filter: grayscale(100%);
-  transition: filter 0.3s ease;
+  opacity: 0.7;
+  transition: all 0.3s ease;
 }
 
 .client-logo:hover {
   filter: grayscale(0%);
+  opacity: 1;
 }
 
 @keyframes fadeIn {
@@ -406,4 +408,11 @@ body {
   filter: drop-shadow(0 4px 12px rgba(129, 140, 248, 0.2));
   transform: translateY(-1px);
   transition: all 0.3s ease;
+}
+
+:root {
+  --theme-primary: #3f4959;
+  --theme-secondary: #bdbdbd;
+  --theme-primary-light: rgba(63, 73, 89, 0.1);
+  --theme-secondary-light: rgba(189, 189, 189, 0.1);
 }
