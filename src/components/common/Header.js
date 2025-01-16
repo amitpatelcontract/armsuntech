@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
 
 const Header = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
+  const [isNavCollapsed, setIsNavCollapsed] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -12,77 +13,76 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const blurValue = Math.min(scrollPosition / 100 * 8, 12);
+  const handleNavCollapse = () => setIsNavCollapsed(!isNavCollapsed);
 
   return (
-    <div className="header" style={{
-      background: 'rgba(67, 56, 202, 0.95)',
-      position: 'fixed',
-      top: 0,
-      left: 0,
-      right: 0,
-      zIndex: 1000,
-      transition: 'all 0.3s ease-in-out',
-      backdropFilter: `blur(${blurValue}px)`,
-      boxShadow: scrollPosition > 20 
-        ? '0 8px 32px rgba(49, 46, 129, 0.15)'
-        : 'none',
-    }}>
-      <nav className="navbar navbar-expand-sm">
-        <div className="container-fluid">
-          <div id="navbarID" className="navbar-brand">
-            <div style={{
-              height: 65,
-              display: 'flex',
-              alignItems: 'center',
-              marginLeft: '1.5rem',
-              gap: '1.2rem'
-            }}>
-              <img 
-                src={require("../../assets/images/logo.png")}
-                alt="Armsuntech Logo"
+    <nav className={`navbar navbar-expand-lg fixed-top ${
+      scrollPosition > 20 ? 'bg-dark bg-opacity-75 navbar-dark shadow' : 'navbar-dark'
+    }`}>
+      <div className="container">
+        {/* Brand with Logo */}
+        <a className="navbar-brand d-flex align-items-center" href="#home">
+          <img
+            src="/path-to-your-logo.png"
+            alt="Armsuntech Logo"
+            height="40"
+            className="me-2"
+          />
+          <span className="fw-bold fs-4">Armsuntech</span>
+        </a>
+
+        {/* Mobile Toggle Button */}
+        <button 
+          className="navbar-toggler border-0" 
+          type="button" 
+          data-bs-toggle="collapse" 
+          data-bs-target="#navbarNav" 
+          aria-controls="navbarNav" 
+          aria-expanded={!isNavCollapsed ? true : false} 
+          aria-label="Toggle navigation"
+          onClick={handleNavCollapse}
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
+
+        {/* Navigation Links */}
+        <div className={`${isNavCollapsed ? 'collapse' : ''} navbar-collapse`} id="navbarNav">
+          <ul className="navbar-nav ms-auto align-items-center">
+            <li className="nav-item">
+              <a className="nav-link px-3" href="#home">Home</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link px-3" href="#about">About Us</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link px-3" href="#clients">Past Clients</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link px-3" href="#services">Services</a>
+            </li>
+            <li className="nav-item ms-lg-2">
+              <a 
+                className="nav-link btn btn-outline-light px-4" 
+                href="#contact"
                 style={{
-                  width: '64px',
-                  height: '64px',
-                  marginBottom: '1rem'
+                  borderRadius: '50px',
+                  transition: 'all 0.3s ease'
                 }}
-              />
-              <div style={{
-                fontFamily: "'Poppins', sans-serif",
-                fontSize: '1.8rem',
-                fontWeight: '600',
-                letterSpacing: '0.8px',
-                textTransform: 'uppercase',
-                background: 'linear-gradient(135deg, #E0E7FF 0%, #FFFFFF 50%, #C7D2FE 100%)',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.1))',
-                position: 'relative',
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'flex-start'
-              }}>
-                Armsuntech
-                <span style={{
-                  fontSize: '0.75rem',
-                  fontWeight: '400',
-                  letterSpacing: '2px',
-                  background: 'linear-gradient(to right, #A5B4FC 0%, #818CF8 100%)',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
-                  textTransform: 'uppercase',
-                  marginTop: '0.2rem',
-                  marginBottom: '1rem'
-                }}>
-                  Custom Mobile & Web Solutions
-                </span>
-              </div>
-            </div>
-          </div>
+                onMouseEnter={(e) => {
+                  e.target.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
+                }}
+                onMouseLeave={(e) => {
+                  e.target.style.backgroundColor = 'transparent';
+                }}
+              >
+                Contact Us
+              </a>
+            </li>
+          </ul>
         </div>
-      </nav>
-    </div>
+      </div>
+    </nav>
   );
 };
 
-export default Header;
+export default Header; 

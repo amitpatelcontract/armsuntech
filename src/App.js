@@ -1,17 +1,17 @@
-import React from "react";
-import { BrowserRouter as Router } from "react-router-dom";
-import Routes from "./routes/Routes";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "./styles/index.css";
+import React from 'react';
+import HomeSection from './components/sections/HomeSection';
+import './index.css';
+import Header from './components/common/Header';
 
-const App = () => {
+function App() {
   return (
-    <>
-      <Router>
-        <Routes />
-      </Router>
-    </>
+    <div className="App">
+      <Header />
+      {/* <main style={{ paddingTop: '80px' }}> */}
+        <HomeSection />
+      {/* </main> */}
+    </div>
   );
-};
+}
 
 export default App;
