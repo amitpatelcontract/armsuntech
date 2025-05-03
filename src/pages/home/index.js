@@ -171,95 +171,216 @@ const Home = () => {
     <div className="page-content">
       <Header />
       {/* Hero Section */}
-      <section className="hero-section gradient-bg" style={{ marginBottom: '2rem' }}>
+      <section className="hero-section" style={{ 
+        minHeight: '100vh',
+        display: 'flex',
+        alignItems: 'center',
+        position: 'relative',
+        overflow: 'hidden',
+        background: 'linear-gradient(135deg, #0A0A0A 0%, #1A1A1A 100%)',
+        padding: '6rem 2rem'
+      }}>
         <div className="hero-content" style={{ 
-          paddingTop: '0rem',
           maxWidth: '1200px',
           margin: '0 auto',
-          padding: '1rem'
+          position: 'relative',
+          zIndex: 2
         }}>
-          <h1 className="title animate-fade-in" style={{ margin: 20 }}>
-            {/* <span className="primary-text" style={{ 
-              fontSize: '2.4rem',
-              background: 'linear-gradient(135deg, #2C3E50 0%, #34495E 100%)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              display: 'block',
-              marginBottom: '1rem'
-            }}>
-              Elite developers with uncompromising ethics
-            </span> */}
-            <span className="tech-text" style={{
-              fontSize: '2rem',
+          <div style={{
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '2rem',
+            maxWidth: '800px'
+          }}>
+            <h1 style={{ 
+              fontSize: '3.5rem',
+              fontWeight: '700',
+              lineHeight: '1.2',
               color: '#FFFFFF',
-              display: 'block',
-              marginBottom: '2.5rem',
-              lineHeight: '1.5',
-              fontFamily: "'Inter', sans-serif",
-              fontWeight: '500'
+              marginBottom: '1rem',
+              fontFamily: "'Poppins', sans-serif"
             }}>
-              We deliver top-tier solutions in{' '}
-              <span className="tech-highlight" style={{
-                color: '#4FC3F7',
-                fontWeight: '600',
-                textShadow: '0 0 15px rgba(79, 195, 247, 0.3)',
-                padding: '0 4px'
-              }}>React Native</span>,{' '}
-              <span className="tech-highlight" style={{
-                color: '#4FC3F7',
-                fontWeight: '600',
-                textShadow: '0 0 15px rgba(79, 195, 247, 0.3)',
-                padding: '0 4px'
-              }}>React.js</span>, and{' '}
-              <span className="tech-highlight" style={{
-                color: '#4FC3F7',
-                fontWeight: '600',
-                textShadow: '0 0 15px rgba(79, 195, 247, 0.3)',
-                padding: '0 4px'
-              }}>Laravel</span>
-            </span>
-            <span className="secondary-text" style={{
-              fontSize: '1.4rem',
-              color: '#E0E0E0',
-              display: 'block',
-              marginBottom: '1.5rem',
+              Your Partner in Building
+              <span style={{
+                background: 'linear-gradient(135deg, #3B82F6 0%, #2563EB 100%)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                display: 'block',
+                marginTop: '0.5rem'
+              }}>
+                Scalable Startup Software
+              </span>
+            </h1>
+
+            <div style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: '1rem',
+              marginBottom: '2rem'
+            }}>
+              <div style={{
+                width: '60px',
+                height: '60px',
+                borderRadius: '50%',
+                background: 'rgba(59, 130, 246, 0.1)',
+                border: '1px solid rgba(59, 130, 246, 0.2)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center'
+              }}>
+                <img 
+                  src={require("../../assets/images/logo.png")}
+                  alt="Amit Patel"
+                  style={{
+                    width: '40px',
+                    height: '40px',
+                    borderRadius: '50%'
+                  }}
+                />
+              </div>
+              <div>
+                <h2 style={{
+                  fontSize: '1.5rem',
+                  fontWeight: '600',
+                  color: '#FFFFFF',
+                  margin: 0
+                }}>
+                  Amit Patel
+                </h2>
+                <p style={{
+                  fontSize: '1rem',
+                  color: '#E5E7EB',
+                  margin: 0,
+                  opacity: 0.9
+                }}>
+                  Tech Advisor & Startup Enthusiast
+                </p>
+              </div>
+            </div>
+
+            <p style={{
+              fontSize: '1.25rem',
               lineHeight: '1.6',
-              fontFamily: "'Inter', sans-serif",
-              fontWeight: '400'
+              color: '#E5E7EB',
+              maxWidth: '600px',
+              marginBottom: '2rem'
             }}>
-              Trusted by startups and leaders like{' '}
-              <span style={{ 
-                color: '#64B5F6',
-                fontWeight: '600' 
-              }}>AMC</span>,{' '}
-              <span style={{ 
-                color: '#90CAF9',
-                fontWeight: '600' 
-              }}>CBS</span>,{' '}
-              <span style={{ 
-                color: '#64B5F6',
-                fontWeight: '600' 
-              }}>Macy's</span>,{' '}
-              <span style={{ 
-                color: '#90CAF9',
-                fontWeight: '600' 
-              }}>BBC America</span>, and{' '}
-              <span style={{ 
-                color: '#64B5F6',
-                fontWeight: '600' 
-              }}>AccuWeather</span>
-            </span>
-            
-          </h1>
-          <a 
-            className="cta-button glow-effect" 
-            href="https://www.linkedin.com/in/aamitmit/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Contact Us
-          </a>
+              Love helping founders translate vision into robust tech & teams.
+            </p>
+
+            <div style={{
+              display: 'flex',
+              flexDirection: 'column',
+              gap: '1.5rem',
+              marginBottom: '3rem'
+            }}>
+              <div style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: '1rem',
+                padding: '1rem 1.5rem',
+                background: 'rgba(20, 20, 20, 0.5)',
+                borderRadius: '12px',
+                border: '1px solid rgba(255, 255, 255, 0.1)',
+                backdropFilter: 'blur(10px)'
+              }}>
+                <span style={{ 
+                  color: '#3B82F6', 
+                  fontSize: '1.5rem',
+                  background: 'rgba(59, 130, 246, 0.1)',
+                  padding: '0.5rem',
+                  borderRadius: '8px'
+                }}>⭐</span>
+                <span style={{ color: '#FFFFFF' }}>
+                  Corporate Foundation: Macy's, Bloomingdale's, AMC, CBS, Accuweather, Xerox
+                </span>
+              </div>
+              <div style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: '1rem',
+                padding: '1rem 1.5rem',
+                background: 'rgba(20, 20, 20, 0.5)',
+                borderRadius: '12px',
+                border: '1px solid rgba(255, 255, 255, 0.1)',
+                backdropFilter: 'blur(10px)'
+              }}>
+                <span style={{ 
+                  color: '#3B82F6', 
+                  fontSize: '1.5rem',
+                  background: 'rgba(59, 130, 246, 0.1)',
+                  padding: '0.5rem',
+                  borderRadius: '8px'
+                }}>🚀</span>
+                <span style={{ color: '#FFFFFF' }}>
+                  Startup Impact: Scaled companies past $100M+ valuation
+                </span>
+              </div>
+            </div>
+
+            <div style={{
+              display: 'flex',
+              flexDirection: 'column',
+              gap: '1rem',
+              maxWidth: '500px'
+            }}>
+              <p style={{
+                color: '#E5E7EB',
+                fontSize: '1.1rem',
+                marginBottom: '1rem'
+              }}>
+                What are you working on? Happy to share insights –
+              </p>
+              <a 
+                href="https://calendly.com/amitpatel/30min"
+                target="_blank"
+                rel="noreferrer"
+                className="glow-effect"
+                style={{
+                  padding: '1rem 2rem',
+                  borderRadius: '50px',
+                  textDecoration: 'none',
+                  fontSize: '1.1rem',
+                  fontWeight: '600',
+                  background: 'linear-gradient(45deg, #3B82F6, #2563EB)',
+                  color: 'white',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '0.5rem',
+                  boxShadow: '0 5px 15px rgba(59, 130, 246, 0.4)',
+                  transition: 'all 0.3s ease',
+                  maxWidth: '200px',
+                  justifyContent: 'center'
+                }}
+              >
+                Book a quick chat
+              </a>
+            </div>
+          </div>
         </div>
+
+        {/* Decorative elements */}
+        <div style={{
+          position: 'absolute',
+          top: '50%',
+          right: '-10%',
+          transform: 'translateY(-50%)',
+          width: '600px',
+          height: '600px',
+          background: 'radial-gradient(circle, rgba(59, 130, 246, 0.1) 0%, transparent 70%)',
+          borderRadius: '50%',
+          zIndex: 1
+        }} />
+        <div style={{
+          position: 'absolute',
+          top: '20%',
+          right: '20%',
+          width: '300px',
+          height: '300px',
+          background: 'radial-gradient(circle, rgba(59, 130, 246, 0.05) 0%, transparent 70%)',
+          borderRadius: '50%',
+          zIndex: 1
+        }} />
       </section>
 
       {/* About Section */}
@@ -435,7 +556,7 @@ const Home = () => {
             justifyContent: 'center'
           }}>
             <a 
-              href="https://www.linkedin.com/in/aamitmit/"
+              href="https://www.linkedin.com/in/armspatel/"
               target="_blank"
               rel="noreferrer"
               className="glow-effect"
