@@ -175,22 +175,25 @@ const Home = () => {
         minHeight: '100vh',
         display: 'flex',
         alignItems: 'center',
+        justifyContent: 'center',
         position: 'relative',
         overflow: 'hidden',
         background: 'linear-gradient(135deg, #0A0A0A 0%, #1A1A1A 100%)',
         padding: '6rem 2rem'
       }}>
         <div className="hero-content" style={{ 
-          maxWidth: '1200px',
-          margin: '0 auto',
+          width: '100%',
           position: 'relative',
-          zIndex: 2
+          zIndex: 2,
+          display: 'flex',
+          justifyContent: 'center'
         }}>
           <div style={{
             display: 'flex',
             flexDirection: 'column',
             gap: '2rem',
-            maxWidth: '800px'
+            maxWidth: '1100px',
+            alignItems: 'center'
           }}>
             <h1 style={{ 
               fontSize: '3.5rem',
@@ -198,18 +201,64 @@ const Home = () => {
               lineHeight: '1.2',
               color: '#FFFFFF',
               marginBottom: '1rem',
-              fontFamily: "'Poppins', sans-serif"
+              fontFamily: "'Poppins', sans-serif",
+              opacity: 0,
+              animation: 'fadeInUp 0.8s ease-out forwards',
+              textAlign: 'center'
             }}>
-              Your Partner in Building
+              <span style={{
+                display: 'block',
+                opacity: 0,
+                transform: 'translateY(20px)',
+                animation: 'fadeInUp 0.8s ease-out forwards 0.2s'
+              }}>
+                Your Partner in Building
+              </span>
               <span style={{
                 background: 'linear-gradient(135deg, #3B82F6 0%, #2563EB 100%)',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
                 display: 'block',
-                marginTop: '0.5rem'
+                marginTop: '0.5rem',
+                opacity: 0,
+                transform: 'translateY(20px)',
+                animation: 'fadeInUp 0.8s ease-out forwards 0.4s, gradientShift 3s ease-in-out infinite',
+                backgroundSize: '200% 200%',
+                textShadow: '0 0 20px rgba(59, 130, 246, 0.5)',
+                position: 'relative'
               }}>
-                Scalable Startup Software
+              Stable & Scalable Startup Software
+                <span style={{
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
+                  width: '100%',
+                  height: '100%',
+                  background: 'linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.2), transparent)',
+                  transform: 'translateX(-100%)',
+                  animation: 'shimmer 2s infinite'
+                }}></span>
               </span>
+              <style>{`
+                @keyframes fadeInUp {
+                  from {
+                    opacity: 0;
+                    transform: translateY(20px);
+                  }
+                  to {
+                    opacity: 1;
+                    transform: translateY(0);
+                  }
+                }
+                @keyframes gradientShift {
+                  0% { background-position: 0% 50%; }
+                  50% { background-position: 100% 50%; }
+                  100% { background-position: 0% 50%; }
+                }
+                @keyframes shimmer {
+                  100% { transform: translateX(100%); }
+                }
+              `}</style>
             </h1>
 
             <div style={{
@@ -263,7 +312,8 @@ const Home = () => {
               lineHeight: '1.6',
               color: '#E5E7EB',
               maxWidth: '1200px',
-              marginBottom: '2rem'
+              marginBottom: '2rem',
+              textAlign: 'center'
             }}>
               I'm passionate about helping founders like you transform your vision into scalable technology and high-performing teams.
             </p>
@@ -272,7 +322,8 @@ const Home = () => {
               display: 'flex',
               flexDirection: 'column',
               gap: '1.5rem',
-              marginBottom: '3rem'
+              marginBottom: '3rem',
+              width: '100%'
             }}>
               <div style={{
                 display: 'flex',
@@ -312,14 +363,37 @@ const Home = () => {
                     fontWeight: '600',
                     letterSpacing: '0.5px'
                   }}>
-                    Our Corporate Legacy
+                    Companies Our Team Has Worked With
                   </span>
                   <span style={{ 
                     color: '#FFFFFF',
                     fontSize: '1.1rem',
-                    opacity: 0.9
+                    opacity: 0.9,
+                    display: 'flex',
+                    flexWrap: 'wrap',
+                    gap: '1.5rem',
+                    justifyContent: 'center'
                   }}>
-                    Macy's, Bloomingdale's, AMC, CBS, Accuweather, Xerox
+                    {[
+                      { name: "Macy's", color: '#FF6B6B' },
+                      { name: "Bloomingdale's", color: '#4ECDC4' }, 
+                      { name: 'AMC', color: '#FFE66D' },
+                      { name: 'CBS News', color: '#95E1D3' },
+                      { name: 'Accuweather', color: '#FF8B94' },
+                      { name: 'Xerox', color: '#A8E6CF' }
+                    ].map((client, index) => (
+                      <span key={index} style={{
+                        padding: '0.5rem 1rem',
+                        background: `${client.color}15`,
+                        color: client.color,
+                        borderRadius: '8px',
+                        border: `1px solid ${client.color}30`,
+                        fontSize: '1.1rem',
+                        fontWeight: '500'
+                      }}>
+                        {client.name}
+                      </span>
+                    ))}
                   </span>
                 </div>
               </div>
@@ -376,16 +450,22 @@ const Home = () => {
 
             <div style={{
               display: 'flex',
-              flexDirection: 'column',
+              flexDirection: 'row',
               gap: '1rem',
-              width: '100%'
+              width: '100%',
+              justifyContent: 'center'
             }}>
               <p style={{
                 color: '#E5E7EB',
                 fontSize: '1.1rem',
-                marginBottom: '1rem'
+                marginBottom: '1rem',
+                width: '70%',
+                textAlign: 'center',
+                display: 'flex',
+                alignItems: 'center',
+                height: '100%'
               }}>
-                Would love to know what you're working on and share any insights I can!
+                Would love to know what you're working on and share any insights I can! - <a href="https://www.linkedin.com/in/armspatel/" target="_blank" rel="noreferrer" style={{color: '#E5E7EB', textDecoration: 'underline'}}>Amit Patel</a>
               </p>
               <a 
                 href="https://calendly.com/amit_patel/startup-strategy-call"
