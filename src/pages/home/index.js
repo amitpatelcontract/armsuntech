@@ -218,7 +218,7 @@ const Home = () => {
               gap: '1rem',
               marginBottom: '2rem'
             }}>
-              <div style={{
+              {/* <div style={{
                 width: '60px',
                 height: '60px',
                 borderRadius: '50%',
@@ -255,17 +255,17 @@ const Home = () => {
                 }}>
                   Tech Advisor & Startup Enthusiast
                 </p>
-              </div>
+              </div> */}
             </div>
 
             <p style={{
               fontSize: '1.25rem',
               lineHeight: '1.6',
               color: '#E5E7EB',
-              maxWidth: '600px',
+              maxWidth: '1200px',
               marginBottom: '2rem'
             }}>
-              Love helping founders translate vision into robust tech & teams.
+              I'm passionate about helping founders like you transform your vision into scalable technology and high-performing teams.
             </p>
 
             <div style={{
@@ -278,43 +278,99 @@ const Home = () => {
                 display: 'flex',
                 alignItems: 'center',
                 gap: '1rem',
-                padding: '1rem 1.5rem',
-                background: 'rgba(20, 20, 20, 0.5)',
+                padding: '1.5rem 2rem',
+                background: 'rgba(255, 255, 255, 0.05)',
                 borderRadius: '12px',
                 border: '1px solid rgba(255, 255, 255, 0.1)',
-                backdropFilter: 'blur(10px)'
+                backdropFilter: 'blur(10px)',
+                boxShadow: '0 4px 20px rgba(0, 0, 0, 0.2)'
               }}>
-                <span style={{ 
-                  color: '#3B82F6', 
-                  fontSize: '1.5rem',
-                  background: 'rgba(59, 130, 246, 0.1)',
-                  padding: '0.5rem',
-                  borderRadius: '8px'
-                }}>⭐</span>
-                <span style={{ color: '#FFFFFF' }}>
-                  Corporate Foundation: Macy's, Bloomingdale's, AMC, CBS, Accuweather, Xerox
-                </span>
+                <div style={{
+                  background: 'rgba(255, 215, 0, 0.15)',
+                  padding: '0.75rem',
+                  borderRadius: '10px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  border: '1px solid rgba(255, 215, 0, 0.2)'
+                }}>
+                  <span style={{ 
+                    color: '#FFD700', 
+                    fontSize: '1.8rem',
+                    fontWeight: '600'
+                  }}>⭐</span>
+                </div>
+                <div style={{
+                  display: 'flex',
+                  width: '100%',
+                  flexDirection: 'column',
+                  gap: '0.25rem'
+                }}>
+                  <span style={{ 
+                    color: '#FFD700',
+                    fontSize: '1rem',
+                    fontWeight: '600',
+                    letterSpacing: '0.5px'
+                  }}>
+                    Our Corporate Legacy
+                  </span>
+                  <span style={{ 
+                    color: '#FFFFFF',
+                    fontSize: '1.1rem',
+                    opacity: 0.9
+                  }}>
+                    Macy's, Bloomingdale's, AMC, CBS, Accuweather, Xerox
+                  </span>
+                </div>
               </div>
               <div style={{
                 display: 'flex',
                 alignItems: 'center',
                 gap: '1rem',
-                padding: '1rem 1.5rem',
-                background: 'rgba(20, 20, 20, 0.5)',
+                padding: '1.5rem 2rem',
+                background: 'rgba(255, 255, 255, 0.05)',
                 borderRadius: '12px',
                 border: '1px solid rgba(255, 255, 255, 0.1)',
-                backdropFilter: 'blur(10px)'
+                backdropFilter: 'blur(10px)',
+                boxShadow: '0 4px 20px rgba(0, 0, 0, 0.2)'
               }}>
-                <span style={{ 
-                  color: '#3B82F6', 
-                  fontSize: '1.5rem',
-                  background: 'rgba(59, 130, 246, 0.1)',
-                  padding: '0.5rem',
-                  borderRadius: '8px'
-                }}>🚀</span>
-                <span style={{ color: '#FFFFFF' }}>
-                  Startup Impact: Scaled companies past $100M+ valuation
-                </span>
+                <div style={{
+                  background: 'rgba(0, 191, 255, 0.15)',
+                  padding: '0.75rem',
+                  borderRadius: '10px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  border: '1px solid rgba(0, 191, 255, 0.2)'
+                }}>
+                  <span style={{ 
+                    color: '#00BFFF', 
+                    fontSize: '1.8rem',
+                    fontWeight: '600'
+                  }}>🚀</span>
+                </div>
+                <div style={{
+                  display: 'flex',
+                  width: '100%',
+                  flexDirection: 'column',
+                  gap: '0.25rem'
+                }}>
+                  <span style={{ 
+                    color: '#00BFFF',
+                    fontSize: '1rem',
+                    fontWeight: '600',
+                    letterSpacing: '0.5px'
+                  }}>
+                    Startup Impact
+                  </span>
+                  <span style={{ 
+                    color: '#FFFFFF',
+                    fontSize: '1.1rem',
+                    opacity: 0.9
+                  }}>
+                    Scaled companies past $100M+ valuation
+                  </span>
+                </div>
               </div>
             </div>
 
@@ -322,17 +378,17 @@ const Home = () => {
               display: 'flex',
               flexDirection: 'column',
               gap: '1rem',
-              maxWidth: '500px'
+              width: '100%'
             }}>
               <p style={{
                 color: '#E5E7EB',
                 fontSize: '1.1rem',
                 marginBottom: '1rem'
               }}>
-                What are you working on? Happy to share insights –
+                Would love to know what you're working on and share any insights I can!
               </p>
               <a 
-                href="https://calendly.com/amitpatel/30min"
+                href="https://calendly.com/amit_patel/startup-strategy-call"
                 target="_blank"
                 rel="noreferrer"
                 className="glow-effect"
